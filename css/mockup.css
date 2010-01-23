@@ -20,7 +20,7 @@ a:active, a:focus {
 
 #banner {
 	text-align:center;
-	padding-top:2px;
+	padding:2px 0 1em;
 	border-top:4px solid #222;
 }
 
@@ -43,6 +43,7 @@ a:active, a:focus {
 
 #banner #tagline {
 	color:#555;
+	text-shadow: 0 1px 1px #FFF;
 	font-style:italic;
 }
 
@@ -66,7 +67,6 @@ p.date {
 
 h3 {
 	text-align:center;
-	
 }
 
 .meta {
