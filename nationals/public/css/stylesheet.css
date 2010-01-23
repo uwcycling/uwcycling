@@ -1,0 +1,13 @@
+#contents {
+  width: 83%;
+  margin: auto; }
+
+#commands {
+  width: 9.5in;
+  margin: auto; }
+
+.command {
+  border: 1px solid black;
+  width: 3in;
+  margin: 4px;
+  float: left; }
