@@ -1,0 +1,103 @@
+body {
+	font-family:Times, "Times New Roman", serif;
+	padding-top:1em;
+	background: #E5E5E5;
+}
+
+p, li {
+	font-size:130%;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight:normal; }
+
+a, a:link, a:visited {
+	color:#7E0E0C;
+}
+
+a:active, a:focus {
+	color:#111;
+}
+
+#banner {
+	text-align:center;
+	padding-top:2px;
+	border-top:4px solid #222;
+}
+
+#banner h1 {
+	font-family:Futura, "Museo Sans", Arial, sans-serif;
+	font-size:550%;
+	text-transform: uppercase;
+	letter-spacing:-0.05em;
+	border-top:1px solid #444;
+}
+
+#banner h1 a, #banner h1 a:link, #banner h1 a:visited, #banner h1 a:hover  { 
+	color:#580A09;
+	text-decoration:none;
+}
+
+#banner h1 a:active, #banner h1 a:focus {
+	color:#222;
+}
+
+#banner #tagline {
+	color:#555;
+	font-style:italic;
+}
+
+#banner #tagline b {
+	color:#580A09;
+	font-weight:normal;
+}
+
+#banner #tagline .gutter {
+	background:url("../img/strike.gif") repeat-x 0% 50%;
+}
+
+#banner a.nav { 
+	background:#F9FC7E; 
+}
+
+p.date {
+	text-align:center;
+	font-variant:small-caps;
+}
+
+h3 {
+	text-align:center;
+	
+}
+
+.meta {
+	padding-top:3.5em;
+	text-align:right;
+}
+
+.meta h2 {
+	text-transform:uppercase;
+}
+
+#previously li {
+	list-style-type: decimal-leading-zero;
+}
+
+#previously li a {
+	text-decoration:none;
+	font-variant:small-caps;
+	background:#EEE;
+}
+
+#sidebar h3 {
+	text-align:center;
+	text-transform:uppercase;
+	font-family:"Cooper Black";
+}
+#sidebar h3 a {
+	text-decoration:none;
+}
+
+.drop { 
+	font-family:"Fertigo Pro";
+	font-size:300%;
+}
