@@ -63,6 +63,7 @@ a:active, a:focus {
 p.date {
 	text-align:center;
 	font-variant:small-caps;
+	font-size:100%;
 }
 
 h3 {
@@ -73,12 +74,8 @@ h3 {
 	font-style:italic;
 }
 
-.meta {
-	padding-top:3.5em;
-	text-align:right;
-}
-
-.meta h2 {
+#primary h2 {
+	text-align:center;
 	text-transform:uppercase;
 }
 
