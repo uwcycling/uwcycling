@@ -69,6 +69,10 @@ h3 {
 	text-align:center;
 }
 
+#primary p.author {
+	font-style:italic;
+}
+
 .meta {
 	padding-top:3.5em;
 	text-align:right;
@@ -80,12 +84,20 @@ h3 {
 
 #previously li {
 	list-style-type: decimal-leading-zero;
+	background:url('../img/dot.gif') repeat-x 0% 50%;
 }
 
 #previously li a {
 	text-decoration:none;
 	font-variant:small-caps;
-	background:#EEE;
+	background:#E5E5E5;
+	padding-right:1em;
+}
+
+#previously li .date {
+	background:#E5E5E5;
+	padding-left:1em;
+	float:right;
 }
 
 #sidebar h3 {
