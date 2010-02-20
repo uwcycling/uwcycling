@@ -3,51 +3,20 @@ require 'rake'
 require 'ostruct'
 require 'haml'
 require 'haml/engine'
-require 'sass'
-require 'sass/engine'
 
 opts = OpenStruct.new
 opts.root = File.expand_path(File.dirname(__FILE__))
 opts.public = File.join(opts.root, "public")
-opts.css = File.join(opts.public, "css")
 opts.haml = File.join(opts.root, "haml")
-opts.sass = File.join(opts.root, "sass")
 
 task :default => :build
-
-task :build => [:haml, :sass]
+task :build => [:haml]
 
 desc "Build haml templates into html."
-task :haml => [:setup] do
+task :haml do
   Dir.glob("#{opts.haml}/*.haml").each do |hf|
     File.open(File.join(opts.public, File.basename(hf).sub("haml", "html")), 'w') do |f|
       f.puts Haml::Engine.new(File.read(hf)).render
     end
   end
-end
-
-desc "Build sass templates into css."
-task :sass => [:setup] do
-  Dir.glob("#{opts.sass}/*.sass").each do |hf|
-    File.open(File.join(opts.css, File.basename(hf).sub("sass", "css")), 'w') do |f|
-      f.puts Sass::Engine.new(File.read(hf)).render
-    end
-  end
-end
-
-desc "Setup the output directories."
-task :setup do
-  unless File.exists?(opts.public)
-    FileUtils.mkdir opts.public
-  end
-
-  unless File.exists?(opts.css)
-    FileUtils.mkdir opts.css
-  end
-end
-
-desc "Remove built files."
-task :clean do
-  Dir.glob("#{opts.public}/*.*").each {|f| FileUtils.rm f }
-  Dir.glob("#{opts.css}/*").each {|f| FileUtils.rm f }
 end
