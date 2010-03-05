@@ -1,5 +1,4 @@
 .DS_Store
 volunteers/cake
 volunteers/README
-volunteers/app/config/core.php
 volunteers/app/config/database.php*
