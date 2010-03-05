@@ -73,6 +73,15 @@ class Volunteer extends AppModel {
 			'insertQuery' => ''
 		)
 	);
+	
+	function beforeSave() {
+		if(!$this->id) {
+			$email = $this->data['Volunteer']['email'];
+			$this->data['Volunteer']['badge'] = Security::hash($email);
+		}
+		
+		return true;
+	}
 
 }
 ?>
