@@ -6,13 +6,13 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
-		echo $this->Form->input('badge');
-		echo $this->Form->input('verified');
-		echo $this->Form->input('deleted');
-		echo $this->Form->input('Block');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit', true));?>
+	<div class="submit">
+<?php echo $this->Form->submit('Edit', array('div'=>false)).
+		' or '.$this->Html->link('Delete Volunteer', array('action'=>'delete', $this->data['Volunteer']['id']));?>
+	</div>
+<?php echo $this->Form->end(); ?>
 </div>
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
