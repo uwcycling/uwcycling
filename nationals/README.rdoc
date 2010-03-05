@@ -1,0 +1,3 @@
+= The Nationals Page
+
+The purpose of the nationals page is to give the nationals event a page.
