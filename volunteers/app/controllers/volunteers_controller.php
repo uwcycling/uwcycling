@@ -62,5 +62,12 @@ class VolunteersController extends AppController {
 		$this->Session->setFlash(sprintf(__('%s was not deleted', true), 'Volunteer'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	function login() {
+	}
+	
+	function logout() {
+		$this->redirect($this->Auth->logout());
+	}
 }
 ?>
