@@ -2,6 +2,7 @@
 class BlocksController extends AppController {
 
 	var $name = 'Blocks';
+	var $helpers = array('Session', 'Html', 'Form', 'Time');
 
 	function index() {
 		$this->Block->recursive = 0;
@@ -26,8 +27,6 @@ class BlocksController extends AppController {
 				$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'block'));
 			}
 		}
-		$volunteers = $this->Block->Volunteer->find('list');
-		$this->set(compact('volunteers'));
 	}
 
 	function edit($id = null) {
@@ -46,8 +45,6 @@ class BlocksController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Block->read(null, $id);
 		}
-		$volunteers = $this->Block->Volunteer->find('list');
-		$this->set(compact('volunteers'));
 	}
 
 	function delete($id = null) {

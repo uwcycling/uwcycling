@@ -1,3 +1,3 @@
 <?php
-	Router::connect('/', array('controller' => 'volunteers', 'action' => 'index'));
+	Router::connect('/', array('controller' => 'blocks', 'action' => 'index'));
 ?>
