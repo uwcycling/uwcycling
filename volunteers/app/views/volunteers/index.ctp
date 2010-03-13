@@ -3,10 +3,13 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
+			<th><?php echo $this->Paginator->sort('block_id');?></th>
 			<th><?php echo $this->Paginator->sort('name');?></th>
 			<th><?php echo $this->Paginator->sort('email');?></th>
+			<th><?php echo $this->Paginator->sort('password');?></th>
 			<th><?php echo $this->Paginator->sort('badge');?></th>
 			<th><?php echo $this->Paginator->sort('verified');?></th>
+			<th><?php echo $this->Paginator->sort('admin');?></th>
 			<th><?php echo $this->Paginator->sort('deleted');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th class="actions"><?php __('Actions');?></th>
@@ -21,10 +24,15 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $volunteer['Volunteer']['id']; ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($volunteer['Block']['title'], array('controller' => 'blocks', 'action' => 'view', $volunteer['Block']['id'])); ?>
+		</td>
 		<td><?php echo $volunteer['Volunteer']['name']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['email']; ?>&nbsp;</td>
+		<td><?php echo $volunteer['Volunteer']['password']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['badge']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['verified']; ?>&nbsp;</td>
+		<td><?php echo $volunteer['Volunteer']['admin']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['deleted']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['created']; ?>&nbsp;</td>
 		<td class="actions">

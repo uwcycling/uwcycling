@@ -56,25 +56,16 @@ class Volunteer extends AppModel {
 	);
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-	var $hasAndBelongsToMany = array(
+	var $belongsTo = array(
 		'Block' => array(
 			'className' => 'Block',
-			'joinTable' => 'blocks_volunteers',
-			'foreignKey' => 'volunteer_id',
-			'associationForeignKey' => 'block_id',
-			'unique' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
+			'foreignKey' => 'block_id',
+			'counterCache' => true
 		)
 	);
 	
 	function beforeSave() {
+		// Creates a badge if this is a new volunteer
 		if(!$this->id) {
 			$email = $this->data['Volunteer']['email'];
 			$this->data['Volunteer']['badge'] = Security::hash($email);

@@ -4,15 +4,17 @@
  		<legend><?php printf(__('Edit %s', true), __('Volunteer', true)); ?></legend>
 	<?php
 		echo $this->Form->input('id');
+		echo $this->Form->input('block_id');
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
+		echo $this->Form->input('password');
+		echo $this->Form->input('badge');
+		echo $this->Form->input('verified');
+		echo $this->Form->input('admin');
+		echo $this->Form->input('deleted');
 	?>
 	</fieldset>
-	<div class="submit">
-<?php echo $this->Form->submit('Edit', array('div'=>false)).
-		' or '.$this->Html->link('Delete Volunteer', array('action'=>'delete', $this->data['Volunteer']['id']));?>
-	</div>
-<?php echo $this->Form->end(); ?>
+<?php echo $this->Form->end(__('Submit', true));?>
 </div>
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
