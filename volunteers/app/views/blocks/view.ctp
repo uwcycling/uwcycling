@@ -60,10 +60,13 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php __('Id'); ?></th>
+		<th><?php __('Block Id'); ?></th>
 		<th><?php __('Name'); ?></th>
 		<th><?php __('Email'); ?></th>
+		<th><?php __('Password'); ?></th>
 		<th><?php __('Badge'); ?></th>
 		<th><?php __('Verified'); ?></th>
+		<th><?php __('Admin'); ?></th>
 		<th><?php __('Deleted'); ?></th>
 		<th><?php __('Created'); ?></th>
 		<th class="actions"><?php __('Actions');?></th>
@@ -78,10 +81,13 @@
 		?>
 		<tr<?php echo $class;?>>
 			<td><?php echo $volunteer['id'];?></td>
+			<td><?php echo $volunteer['block_id'];?></td>
 			<td><?php echo $volunteer['name'];?></td>
 			<td><?php echo $volunteer['email'];?></td>
+			<td><?php echo $volunteer['password'];?></td>
 			<td><?php echo $volunteer['badge'];?></td>
 			<td><?php echo $volunteer['verified'];?></td>
+			<td><?php echo $volunteer['admin'];?></td>
 			<td><?php echo $volunteer['deleted'];?></td>
 			<td><?php echo $volunteer['created'];?></td>
 			<td class="actions">

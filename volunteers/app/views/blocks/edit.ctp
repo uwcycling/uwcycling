@@ -11,7 +11,6 @@
 		echo $this->Form->input('ends_at');
 		echo $this->Form->input('volunteer_limit');
 		echo $this->Form->input('volunteer_count');
-		echo $this->Form->input('Volunteer');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
