@@ -5,12 +5,22 @@
     %link(href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
     /[if lt IE 8]
       %link(href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css")
-  %body
-    .container
+  %body.two-col
+    #container
       #header
         %h1 Nationals
 
-        %h4
+      #sidebar
+        %ul
+          %li
+            %a.sidebarLink{ :href => "http://www.mapmyride.com/ride/united-states/wi/blue-mounds/115125606735557005" } Road Course Map
+          %li
+            %a.sidebarLink{ :href => "http://www.usacycling.org/" } USA Cycling
+
+      #content
+        %img#cool{ :src => "images/capcrit08.jpg" }
+
+        %h4.sponsorTitle
           Trek Bikes
         .sponsorDescription
           %p
@@ -33,7 +43,7 @@
             Trek, Gary Fisher, and Bontrager brand names, Trek continues to pursue
             new ways to bring the joy of cycling to all people.
 
-        %h4 Mt. Borah
+        %h4.sponsorTitle Mt. Borah
         .sponsorDescription
           Mt. Borah creates functional cycling apparel that lets you enjoy your
           outdoor experience in maximum comfort. They use only quality technical
@@ -50,7 +60,7 @@
           developing and manufacturing the best active apparel available, Mt.
           Borah is proud to have all of their apparel made in the United States!
 
-        %h4 UW Cycling
+        %h4.sponsorTitle UW Cycling
         .sponsorDescription
           UW Cycling is the largest club sport on UW campus. We are a group of 90
           students who raise bicycle awareness, organize and volunteer for
@@ -63,7 +73,7 @@
           nation to offer its own scholarship.  Lastly, we are pleased to be your
           hosts for the Collegiate Cycling National Championships. 
 
-        %h4 Concourse Hotel
+        %h4.sponsorTitle Concourse Hotel
         .sponsorDescription
           Located right in the heart of downtown Madison, the Madison Concourse
           Hotel is the official hotel of the Collegiate National Championships.
@@ -74,6 +84,7 @@
           teams; providing space for bike storage, parking for team cars, in
           addition to discounted rooms for team members.  Please consider the
           Madison Concourse Hotel your ideal location for your next vacation,
-          meeting, convention or special event.
+          meeting, convention or special event. 
 
-        %a{ :href => "http://www.mapmyride.com/ride/united-states/wi/blue-mounds/115125606735557005" } Road Course Map
+      #footer
+        Created by UwCycling members Alex Bird and Brian Cobb.
