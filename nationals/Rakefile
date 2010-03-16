@@ -28,11 +28,9 @@ namespace :watch do
     monitor = HamlWatcher.new
     monitor.run
   end
-
-  #task :compass do
-  #end
 end
 
+desc "View the index page in google chrome."
 task :view do
   sh "google-chrome public/index.html"
 end

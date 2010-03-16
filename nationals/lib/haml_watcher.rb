@@ -41,7 +41,8 @@ class HamlWatcher
     dirname = File.dirname(html_fname)
     FileUtils.mkdir_p(dirname)
     File.open(html_fname, 'w') do |f|
-      f.write(Haml::Engine.new(File.read(File.join(@haml_src, haml_fname))).render)
+      html = Haml::Engine.new(File.read(File.join(@haml_src, haml_fname)))
+      f.write(html.render)
     end
   end
 end
