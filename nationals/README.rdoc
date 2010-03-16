@@ -5,4 +5,5 @@ The purpose of the nationals page is to give the nationals event a page.
 == Instructions
 
 To get a preview of the nationals site, you can view file the
-file:///home/.../nationals/public/index.html file in your browser.
+<tt>file:///home/.../nationals/public/index.html</tt>
+file in your browser.
