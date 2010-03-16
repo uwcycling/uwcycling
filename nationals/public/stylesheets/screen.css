@@ -425,55 +425,6 @@ input.text, input.title { width: 300px; }
 
 textarea { width: 390px; height: 250px; }
 
-body.bp { line-height: 1.5; font-family: Helvetica Neue, Arial, Helvetica, sans-serif; color: #333333; font-size: 75%; }
-body.bp h1 { font-weight: normal; color: #222222; font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
-body.bp h1 img { margin: 0; }
-body.bp h2 { font-weight: normal; color: #222222; font-size: 2em; margin-bottom: 0.75em; }
-body.bp h3 { font-weight: normal; color: #222222; font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
-body.bp h4 { font-weight: normal; color: #222222; font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
-body.bp h5 { font-weight: normal; color: #222222; font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
-body.bp h6 { font-weight: normal; color: #222222; font-size: 1em; font-weight: bold; }
-body.bp h2 img, body.bp h3 img, body.bp h4 img, body.bp h5 img, body.bp h6 img { margin: 0; }
-body.bp p { margin: 0 0 1.5em; }
-body.bp p img.left { display: inline; float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
-body.bp p img.right { display: inline; float: right; margin: 1.5em 0 1.5em 1.5em; padding: 0; }
-body.bp a { text-decoration: underline; color: #000099; }
-body.bp a:visited { color: #000066; }
-body.bp a:focus { color: black; }
-body.bp a:hover { color: black; }
-body.bp a:active { color: #cc0099; }
-body.bp blockquote { margin: 1.5em; color: #666; font-style: italic; }
-body.bp strong { font-weight: bold; }
-body.bp em { font-style: italic; }
-body.bp dfn { font-style: italic; font-weight: bold; }
-body.bp sup, body.bp sub { line-height: 0; }
-body.bp abbr, body.bp acronym { border-bottom: 1px dotted #666; }
-body.bp address { margin: 0 0 1.5em; font-style: italic; }
-body.bp del { color: #666; }
-body.bp pre { margin: 1.5em 0; white-space: pre; }
-body.bp pre, body.bp code, body.bp tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
-body.bp li ul, body.bp li ol { margin: 0 1.5em; }
-body.bp ul { margin: 0 1.5em 1.5em 1.5em; list-style-type: disc; }
-body.bp ol { margin: 0 1.5em 1.5em 1.5em; list-style-type: decimal; }
-body.bp dl { margin: 0 0 1.5em 0; }
-body.bp dl dt { font-weight: bold; }
-body.bp dd { margin-left: 1.5em; }
-body.bp table { margin-bottom: 1.4em; width: 100%; }
-body.bp th { font-weight: bold; }
-body.bp thead th { background: #c3d9ff; }
-body.bp th, body.bp td, body.bp caption { padding: 4px 10px 4px 5px; }
-body.bp tr.even td { background: #e5ecf9; }
-body.bp tfoot { font-style: italic; }
-body.bp caption { background: #eee; }
-body.bp .quiet { color: #666666; }
-body.bp .loud { color: #111111; }
-
-body.bp .box { padding: 1.5em; margin-bottom: 1.5em; background: #E5ECF9; }
-body.bp div.border { padding-right: 4px; margin-right: 5px; border-right: 1px solid #eeeeee; }
-body.bp div.colborder { padding-right: 24px; margin-right: 25px; border-right: 1px solid #eeeeee; }
-body.bp hr { background: #dddddd; color: #dddddd; clear: both; float: none; width: 100%; height: .1em; margin: 0 0 1.45em; border: none; }
-body.bp hr.space { background: #dddddd; color: #dddddd; clear: both; float: none; width: 100%; height: .1em; margin: 0 0 1.45em; border: none; background: #fff; color: #fff; }
-
 body.bp .clear { clear: both; }
 body.bp .nowrap { white-space: nowrap; }
 body.bp .clearfix { overflow: hidden; display: inline-block; }
@@ -505,7 +456,12 @@ body.two-col #sidebar { display: inline; float: left; margin-right: 10px; width:
 * html body.two-col #sidebar { overflow-x: hidden; }
 body.two-col #content { display: inline; float: left; margin-right: 0; width: 790px; }
 * html body.two-col #content { overflow-x: hidden; }
-body.two-col #footer { display: inline; float: left; margin-right: 10px; width: 950px; text-align: center; }
+body.two-col #footer { display: inline; float: left; margin-right: 10px; width: 950px; text-align: center; margin-top: 20px; margin-bottom: 20px; }
 * html body.two-col #footer { overflow-x: hidden; }
-body.two-col #cool { padding: 10px; float: left; }
+body.two-col .companyLogo { padding: 10px; }
+body.two-col #capcrit { padding: 10px; float: left; }
+body.two-col #trekLogo { float: right; }
+body.two-col #borahLogo { float: left; }
+body.two-col #uwLogo { float: right; }
+body.two-col #concourseLogo { float: left; }
 body.two-col .sponsorTitle { margin-top: 30px; }

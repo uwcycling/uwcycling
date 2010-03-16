@@ -2,6 +2,7 @@
 @import blueprint/reset.sass
 // To configure blueprint, edit the partials/base.sass file.
 @import partials/base.sass
+@import partials/mixins.sass
 // Import all the default blueprint modules so that we can access their mixins.
 @import blueprint
 // Import the non-default scaffolding module.
@@ -11,8 +12,8 @@
 +blueprint
 
 //Recommended Blueprint configuration with scoping and semantic layout:
-+blueprint-typography("body.bp")
-+blueprint-scaffolding("body.bp")
+//+blueprint-typography("body.bp")
+//+blueprint-scaffolding("body.bp")
 body.bp
   +blueprint-utilities
   +blueprint-debug
@@ -47,9 +48,29 @@ body.two-col
   #footer
     +column(!blueprint_grid_columns)
     text-align: center
+    margin:
+      top: 20px
+      bottom: 20px
 
-  #cool
-    padding: 10px
+  /////// Image stying ////////
+
+  .companyLogo
+    +embeddedImage
+
+  #capcrit
+    +embeddedImage
+    float: left
+
+  #trekLogo
+    float: right
+
+  #borahLogo
+    float: left
+
+  #uwLogo
+    float: right
+
+  #concourseLogo
     float: left
   
   .sponsorTitle

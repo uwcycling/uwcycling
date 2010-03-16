@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    %title Nationals
     %link(href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
     %link(href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
     /[if lt IE 8]
@@ -11,17 +12,19 @@
         %h1 Nationals
 
       #sidebar
-        %ul
-          %li
-            %a.sidebarLink{ :href => "http://www.mapmyride.com/ride/united-states/wi/blue-mounds/115125606735557005" } Road Course Map
-          %li
+        %h2 Links
+        %dl
+          %dt
+            Course Maps
+            %dd
+              %a.sidebarLink{ :href => "http://www.mapmyride.com/ride/united-states/wi/blue-mounds/115125606735557005", :target => "_blank" } Road Race
+          %dt
             %a.sidebarLink{ :href => "http://www.usacycling.org/" } USA Cycling
 
       #content
-        %img#cool{ :src => "images/capcrit08.jpg" }
+        %img#capcrit{ :src => "images/capcrit08.jpg" }
 
-        %h4.sponsorTitle
-          Trek Bikes
+        %h3.sponsorTitle Trek Bikes
         .sponsorDescription
           %p
             When Trek began in 1976, their mission was simple: Build the best
@@ -33,6 +36,7 @@
             revolutionary OCLV Carbon first introduced in 1992, Trek's passion
             for innovation, quality, and performance leads the industry with
             next-generation thinking and cutting edge technology. 
+          %img.companyLogo#trekLogo{ :src => "images/trek.jpg", :width => "150" } 
           %p
             In addition to top of the line road and time trial bikes you'll see
             racing at the Collegiate Cycling championships, Trek also has an
@@ -43,8 +47,9 @@
             Trek, Gary Fisher, and Bontrager brand names, Trek continues to pursue
             new ways to bring the joy of cycling to all people.
 
-        %h4.sponsorTitle Mt. Borah
+        %h3.sponsorTitle Mt. Borah
         .sponsorDescription
+          %img.companyLogo#borahLogo{ :src => "images/mtborah.gif" }
           Mt. Borah creates functional cycling apparel that lets you enjoy your
           outdoor experience in maximum comfort. They use only quality technical
           fabrics designed specifically for extended use under any condition.
@@ -60,8 +65,9 @@
           developing and manufacturing the best active apparel available, Mt.
           Borah is proud to have all of their apparel made in the United States!
 
-        %h4.sponsorTitle UW Cycling
+        %h3.sponsorTitle UW Cycling
         .sponsorDescription
+          %img.companyLogo#uwLogo{ :src => "images/motionW.gif", :width => "150" }
           UW Cycling is the largest club sport on UW campus. We are a group of 90
           students who raise bicycle awareness, organize and volunteer for
           numerous local and national cycling events, and race bicycles in the
@@ -73,8 +79,9 @@
           nation to offer its own scholarship.  Lastly, we are pleased to be your
           hosts for the Collegiate Cycling National Championships. 
 
-        %h4.sponsorTitle Concourse Hotel
+        %h3.sponsorTitle Concourse Hotel
         .sponsorDescription
+          %img.companyLogo#concourseLogo{ :src => "images/concourse.png" }
           Located right in the heart of downtown Madison, the Madison Concourse
           Hotel is the official hotel of the Collegiate National Championships.
           It is only one block from the Collegiate National Championships
