@@ -14,7 +14,7 @@
 //Recommended Blueprint configuration with scoping and semantic layout:
 //+blueprint-typography("body.bp")
 //+blueprint-scaffolding("body.bp")
-body.bp
+//body.bp
   +blueprint-utilities
   +blueprint-debug
   +blueprint-interaction
@@ -23,6 +23,8 @@ body.bp
 
 //Page layout can be done using mixins applied to your semantic classes and IDs:
 body.two-col
+  //background-color: #fcfcfc
+
   #container
     +container
 
@@ -30,8 +32,25 @@ body.two-col
     +column(!blueprint_grid_columns)
     text-align: center
 
+  #divider
+    margin: auto
+    width: 700px
+    border-bottom: black 1px solid
+
   #header
     margin-top: 20px
+
+    #logoWrapper
+      +column(!blueprint_grid_columns / 2)
+      #logo
+        width: 350px
+
+
+    #schedule
+      margin-top: 60px
+      text-align: left
+      font-size: 150%
+      +column(!blueprint_grid_columns / 2, true)
 
   #sidebar
     // One third of the grid columns, rounding down. With 24 cols, this is 8.
@@ -43,7 +62,13 @@ body.two-col
     // With 24 cols, this is 16.
     !content_columns = 20
     // true means it's the last column in the row
-    +column(!content_columns, true)
+    //+column(!content_columns, true)
+
+    #sponsors
+      +column(!blueprint_grid_columns / 2)
+
+    #courses
+      +column(!blueprint_grid_columns / 2, true)
 
   #footer
     +column(!blueprint_grid_columns)
@@ -52,26 +77,38 @@ body.two-col
       top: 20px
       bottom: 20px
 
-  /////// Image stying ////////
+.sectionTitle
+  +sectionTitleFont
 
-  .companyLogo
-    +embeddedImage
 
-  #capcrit
-    +embeddedImage
-    float: left
+/////// Image stying ////////
+.elevationProfile
+  width: 100%
+  height: auto
 
-  #trekLogo
+//.companyLogo
+  +embeddedImage
+
+#capcrit
+  +embeddedImage
+  float: left
+
+.sponsor
+  //width: 500px
+  .sponsorLogo
+    max-width: 150px
+    //float: left
+  //.sponsorCaption
     float: right
 
-  #borahLogo
-    float: left
+//#borahLogo
+  float: left
 
-  #uwLogo
-    float: right
+//#uwLogo
+  float: right
 
-  #concourseLogo
-    float: left
-  
-  .sponsorTitle
-    margin-top: 30px
+//#concourseLogo
+  float: left
+
+//.sponsorTitle
+  margin-top: 30px
