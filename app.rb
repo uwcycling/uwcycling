@@ -4,15 +4,12 @@ require 'sinatra'
 require 'haml'    #must be loaded after sinatra
 
 # set sinatra's variables
-#set :app_file, __FILE__
-#set :root, File.dirname(__FILE__)
+set :app_file, __FILE__
+set :root, File.dirname(__FILE__)
+#enable :static
 
 configure do
-  Compass.configuration do |config|
-    config.project_path = File.dirname(__FILE__)
-    config.sass_dir = File.join('views', 'stylesheets')
-  end
-
+  Compass.configuration.parse(File.join(Sinatra::Application.root, 'config', 'compass.config'))
   set :haml, { :format => :html5 }
 end
 
