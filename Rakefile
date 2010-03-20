@@ -1,36 +1,7 @@
 require 'rubygems'
 require 'rake'
-require 'ostruct'
-require 'haml'
-require 'haml/engine'
-
-opts = OpenStruct.new
-opts.root = File.expand_path(File.dirname(__FILE__))
-opts.public = File.join(opts.root, "public")
-opts.haml = File.join(opts.root, "haml")
-
-task :default => :build
-task :build => [:haml]
-
-desc 'Build haml templates into html.'
-task :haml do
-  Dir.glob("#{opts.haml}/*.haml").each do |hf|
-    File.open(File.join(opts.public, File.basename(hf).sub("haml", "html")), 'w') do |f|
-      f.puts Haml::Engine.new(File.read(hf)).render
-    end
-  end
-end
-
-namespace :watch do
-  desc 'Run the Haml watcher.'
-  task :haml do
-    require 'haml_watcher'
-    monitor = HamlWatcher.new
-    monitor.run
-  end
-end
 
 desc "View the index page in google chrome."
 task :view do
-  sh "google-chrome public/index.html"
+  sh "google-chrome http://localhost:4567"
 end
