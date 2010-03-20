@@ -6,6 +6,6 @@ The purpose of the nationals page is to give the nationals event a page.
 
 To get a preview of the nationals site, you can view file the
 
-<tt>file:///home/.../nationals/public/index.html</tt>
+<tt>http://localhost:4567</tt>
 
 file in your browser.

@@ -12,6 +12,8 @@ configure do
     config.project_path = File.dirname(__FILE__)
     config.sass_dir = File.join('views', 'stylesheets')
   end
+
+  set :haml, { :format => :html5 }
 end
 
 # at a minimum, the main sass file must reside within the ./views directory.
